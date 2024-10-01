@@ -1,0 +1,14 @@
+{
+  "device_config_file": "c:\\pwrcon\\.device",
+  "log_file": "'c:\\pwrcon\\pwrcon.log'",
+  "log_to_file": false,
+  "mac": "60:83:E7:15:1B:11",
+  "username": "user",
+  "password": "password",
+  "ip": "192.168.50.193",
+  "interval": 10,
+  "th_low": 20,
+  "th_high": 80,
+  "always_on_processes": [ "VALORANT.exe" ],
+  "power_on_start": true
+}

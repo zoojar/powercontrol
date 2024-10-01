@@ -1,0 +1,37 @@
+# Ignore log files
+*.log
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore environment variable files
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+
+# Ignore device files
+.device
+
+# Ignore spec files
+*.spec
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore Python compiled files
+*.pyc
+
+# Ignore executables
+*.exe
+
+# Ignore venv
+venv/
+
+# Ignore config.json
+config.json
