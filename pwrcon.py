@@ -5,6 +5,8 @@ import psutil
 import time
 import win32evtlogutil
 import win32evtlog
+import win32api
+import win32con
 import psutil
 import socket
 import sys
@@ -139,10 +141,23 @@ class PowerController:
         self.log('Killed by user')
         sys.exit(0)
 
+    def shutdown_handler(self, event):
+        if event in (win32con.CTRL_SHUTDOWN_EVENT, win32con.CTRL_LOGOFF_EVENT):
+            self.log('System shutdown or logoff detected')
+            self.exit_handler()
+
     def start(self):
         self.log('Starting service...')
         atexit.register(self.exit_handler)
+        win32api.SetConsoleCtrlHandler(self.shutdown_handler, True)
         asyncio.run(self.main())
 
 controller = PowerController()
 controller.start()
+
+
+
+
+
+
+
